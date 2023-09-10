@@ -1,0 +1,39 @@
+@import '../../styles/variables';
+
+.cardHotel {
+  // max-width: 400px;
+  position: relative;
+  background-color: $white;
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow;
+  // height: 400px;
+
+  .container-picture {
+    // height: 250px;
+
+    .picture {
+      width: 100%;
+      border-top-left-radius: $borderRadius;
+      border-top-right-radius: $borderRadius;
+      // height: 100%;
+      border-bottom: 1px solid $purpleVeryLight;
+    }
+  }
+
+ 
+
+  .container-name_btn {
+    padding: 1rem;
+
+    .name {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin: 1rem 0;
+      color: $dark;
+    }
+  }
+
+  .ranking {
+    font-size: 0.9rem;
+  }
+}

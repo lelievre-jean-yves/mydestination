@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+
+.container-confirmation {
+  max-width: 700px;
+  padding: 7rem 1rem 2rem;
+  margin: 0 auto 5rem;
+
+  .confirmation-reservation {
+    padding: 2rem;
+    text-align: center;
+    background-color: $white;
+    box-shadow: $boxShadow;
+    border-radius: $borderRadius;
+  
+    .text {
+      margin-top: 2rem;
+    }
+  }
+}

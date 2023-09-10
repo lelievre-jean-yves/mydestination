@@ -1,0 +1,18 @@
+@import '../../styles/variables';
+
+.error404 {
+  text-align: center;
+  padding: 5rem 1rem;
+
+  &.dark-mode {
+    color: $white;
+  }
+
+  .e404 {
+    font-size: 8rem;
+  }
+
+  .text {
+    margin-bottom: 4rem;
+  }
+}

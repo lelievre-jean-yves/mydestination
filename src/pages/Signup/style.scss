@@ -1,0 +1,54 @@
+@import '../../styles/variables';
+
+.user-form {
+  padding: 4rem 0 1rem;
+
+  .box {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $white;
+    box-shadow: $boxShadow;
+    border-radius: $borderRadius;
+    padding: 4rem 1rem;
+
+    .lastName-field {
+      @media screen and (max-width: 600px) {
+        margin-top: 1.5rem;
+      }
+    }
+
+    .validation-password {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+
+      .list {
+        margin-top: 0.2rem;
+      }
+    }
+  }
+
+  .link {
+    margin-top: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    color: $purple;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.text-normal {
+  color: $dark !important;
+}
+
+.text-danger {
+  color: red !important;
+}
+
+.text-success {
+  color: green !important;
+}

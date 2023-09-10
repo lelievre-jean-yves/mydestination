@@ -1,0 +1,46 @@
+@import '../../styles/variables';
+
+.App {
+  // padding: 0 1rem;
+  // max-width: 1200px;
+  // margin: 0 auto;
+
+  animation: pop .5s;
+
+  .hello {
+    position: absolute;
+    top: 9%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+
+.appLoad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $purpleVeryLight;
+  height: 100vh;
+
+  h1 {
+    font-size: 2rem;
+    text-decoration: none;
+    font-family: Satisfy, cursive, sans-serif;
+    color: $purple;
+		margin-right: 1rem;
+  }
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

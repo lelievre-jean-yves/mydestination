@@ -1,0 +1,42 @@
+@import '../../styles/variables';
+
+.citiesHome {
+  margin-top: 6rem;
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 0.7rem;
+    color: $purple;
+    font-weight: bold;
+  }
+
+  .alice-carousel__dots-item {
+    background-color: rgba(128, 0, 128, 0.452);
+
+    &:hover {
+      background-color: $purple;
+    }
+
+    @media screen and (min-width: 800px) {
+      display: none;
+    }
+  }
+
+  .alice-carousel__dots-item.__active {
+    background-color: $purple;
+  }
+
+  .cities {
+    // display: grid;
+    // grid-template-columns: 1fr;
+    // gap: 1rem;
+
+    // @media screen and (min-width: 600px) {
+    //   grid-template-columns: 1fr 1fr;
+    // }
+
+    // @media screen and (min-width: 1000px) {
+    //   grid-template-columns: 1fr 1fr 1fr 1fr;
+    // }
+  }
+}

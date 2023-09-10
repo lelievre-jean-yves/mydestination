@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+
+
+.rooms {
+  border-top: 1px solid $purple;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  @media screen and (min-width: 800px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

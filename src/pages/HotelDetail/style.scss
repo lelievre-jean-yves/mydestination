@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+
+.container-hotelDetail {
+  margin: 2rem auto 7rem;
+  max-width: 1300px;
+  padding: 1rem;
+
+  .hotelDetail {
+    transform: translateY(4rem);
+    padding: 1rem;
+    box-shadow: $boxShadow;
+    border-radius: $borderRadius;
+    background-color: $white;
+  
+    @media screen and (min-width: 800px) {
+    }
+  }
+}
+

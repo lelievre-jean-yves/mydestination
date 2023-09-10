@@ -1,0 +1,285 @@
+@import '../../styles/variables';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: $boxShadow;
+  background-color: $white;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 3;
+
+  @media screen and (min-width: 800px) {
+    gap: 0.5rem;
+    padding: 0rem 1rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+    text-decoration: none;
+    font-family: Satisfy, cursive, sans-serif;
+    color: $purple;
+  }
+
+  .container-menu {
+    @media screen and (min-width: 800px) {
+      width: 100%;
+    }
+    .icon-open {
+      font-size: 1.8rem;
+      cursor: pointer;
+      
+      @media screen and (min-width: 800px) {
+        display: none;
+      }
+    }
+
+    .menu {
+      background-color: $white;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 70%;
+      bottom: 0;
+      z-index: 2;
+      box-shadow: $boxShadow;
+      transform: translate(200%);
+
+      @media screen and (min-width: 800px) {
+        position: static;
+        transform: translateX(0);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background: none;
+        box-shadow: none;
+        justify-content: flex-end;
+      }
+      .nav-link {
+        margin-top: 4rem;
+
+        @media screen and (min-width: 800px) {
+          margin-top: 0;
+          
+        }
+
+        &_list {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          padding: 0;
+
+          @media screen and (min-width: 800px) {
+            flex-direction: row;
+          }
+
+          .menu-link {
+            padding: 0.5rem 1rem;
+            font-size: 1.1rem;
+            display: flex;
+            gap: 0.5rem;
+            color: $dark;
+
+            @media screen and (min-width: 800px) {
+              padding: 0.5rem 1rem;
+            }
+
+            &--active {
+              color: $purple;
+            }
+
+            &:hover {
+              background-color: $purpleVeryLight;
+              color: $purple;
+
+              @media screen and (min-width: 800px) {
+                background: none;
+              }
+            }
+          }
+        }
+      }
+
+      .icon-close {
+        font-size: 1.8rem;
+        cursor: pointer;
+        position: absolute;
+        right: 1rem;
+        top: 0.9rem;
+
+        @media screen and (min-width: 800px) {
+          display: none;
+        }
+      }
+
+      .nav-btn {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        //display:none ;
+
+        @media screen and (min-width: 800px) {
+          margin: 0 0 0 0.5rem;
+          flex-direction: row;
+
+          &::before {
+            content: '';
+            display: block;
+            width: 1px;
+            background-color: $purple;
+            margin-right: 1rem;
+          }
+        }
+
+        .btn {
+          font-size: 1rem;
+          width: 100%;
+          color: $purple;
+
+          @media screen and (min-width: 800px) {
+            border: 1px solid $purple;
+            color: $dark;
+          }
+        }
+      }
+
+      .nav-user {
+        padding: 1rem;
+        color: $dark;
+        position: relative;
+        //  display: none;
+        @media screen and (min-width: 800px) {
+          margin: 0 1rem;
+        display: flex;
+
+          &::before {
+            content: '';
+            display: block;
+            width: 1px;
+            background-color: $purple;
+            margin-right: 1.6rem;
+          }
+
+          
+        }
+
+        .user-name {
+          font-weight: bold;
+          font-size: 1.2rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+
+          @media screen and (min-width: 800px) {
+            cursor: pointer;
+            padding: 0.2rem 0.5rem;
+
+            &:hover {
+              background-color: $purpleVeryLight;
+            }
+          }
+        }
+
+        .nav-user_list {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          @media screen and (min-width: 800px) {
+            background-color: $white;
+            position: absolute;
+            top: 3.3rem;
+            right: 0rem;
+            width: 200px;
+            padding: 1rem;
+            box-shadow: $boxShadow;
+            border-radius: $borderRadius;
+            display: none;
+
+            &.show {
+              display: flex;
+            }
+          }
+
+          .item {
+
+
+            a {
+              padding: 0 0.3rem;
+              display: inline-block;
+              color: rgb(63, 63, 63);
+
+              &:hover {
+                color: $purple;
+              }
+
+              span {
+                display: inline-block;
+                transform: translateY(-0.3rem);
+              }
+            }
+          }
+        }
+      }
+
+      &.show-menu {
+        animation-name: show_menu;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+      }
+
+      &.hide-menu {
+        // animation-name: hide_menu;
+        // animation-duration: 0.3s;
+        // animation-fill-mode: forwards;
+
+        @media screen and (min-width: 800px) {
+          animation-name: none;
+        }
+      }
+    }
+
+    .bg-modal {
+      display: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.473);
+      z-index: 1;
+
+      &.show-menu {
+        display: block;
+
+        @media screen and (min-width: 800px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@keyframes show_menu {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes hide_menu {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(200%);
+  }
+}

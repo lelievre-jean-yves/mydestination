@@ -1,0 +1,72 @@
+@import '../../styles/variables';
+
+.footer {
+  background-color: hsl(210, 26%, 17%);
+  padding: 2rem 1rem;
+  color: $white;
+  margin-top: 2rem;
+
+  .container-contact_newsl {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    @media screen and (min-width: 900px) {
+      flex-direction: row;
+      justify-content: space-around;
+
+    }
+
+    form {
+      span {
+        display: block;
+        font-size: 1.4rem;
+      }
+
+      label {
+        display: inline-block;
+        margin-top: 1rem;
+        font-size: 1.2rem;
+      }
+
+      input {
+        width: 100%;
+        padding: .5rem;
+        font-size: 1rem;
+      }
+    }
+
+    .title {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-align: center;
+
+      .southIcon {
+        animation: animationSouthIcon 1s infinite;
+      }
+    }
+
+    .icons {
+      display: flex;
+      gap: 4rem;
+      justify-content: center;
+
+      a {
+        &:hover {
+          color: $purple;
+          transition: .4s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes animationSouthIcon {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
